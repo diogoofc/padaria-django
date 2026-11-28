@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fazer pedido</title>
+</head>
+<body>
+    <h1>Faça o seu pedido</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar pedido</button>
+    </form>
+
+    <p><a href="{% url 'lista_produtos' %}">Voltar ao catálogo</a></p>
+</body>
+</html>
